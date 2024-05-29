@@ -1,0 +1,24 @@
+.item {
+    transition: .3s ease-in-out;
+
+    &:hover {
+    transform: scale(1.04);
+    }
+    img {
+        max-width: 100%;
+        border-radius: 7px;
+    }
+
+    .productName {
+        margin: 0;
+    }
+    .prices {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .oldPrice {
+            text-decoration: line-through;
+            color: #888;
+        }
+    }
+}

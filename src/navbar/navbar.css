@@ -1,0 +1,229 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  .logo {
+    display: flex;
+    gap: 10px;
+    height: 60px;
+    img {
+      width: 60px;
+      height: 60px;
+    }
+  }
+  .logo h1 {
+    font-size: 1.8rem;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+  
+  .nav-links {
+    display: flex;
+    align-items: center;
+    height: 70px;
+    li {
+      list-style: none;
+      text-transform: capitalize;
+      font-size: 1.1rem;
+      padding: 0 30px;
+      height: 70px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      color: #555; 
+      &:hover , &.active {
+        color: #000;
+      }
+      &::before , &.active::before {
+        content: "";
+        position: absolute;
+        width: 0%;
+        height: 1px;
+        background-color: #000;
+        left: 0;
+        bottom: 0;
+        transition: .3s ease-in;
+      }
+  
+      &.active::before {
+        width: 100%;
+      }
+  
+      &:hover::before  {
+        width: 100%;
+      }
+    }
+  
+   
+  }
+  
+  .logIn-cart-section {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    .login-btn {
+      width: 120px;
+      padding: 10px 20px;
+      border-radius: 20px;
+      border: 1px solid #000;
+      background-color: #fff;
+      color: #000;
+      cursor: pointer;
+      text-transform: capitalize;
+    }
+    .cart {
+      position: relative;
+      padding: 0;
+      img {
+        width: 35px;
+        height: 35px;
+      }
+      .products-number {
+          position: absolute;
+          top: -5px;
+          right: -10px;
+  
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: red;
+        color: #fff;
+  
+      }
+    }
+  }
+  
+}
+
+@media (max-width : 991px) {
+  .navbar {
+    display: none;
+  }
+}
+
+
+
+.navbar-mobile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  position: relative;
+  .logo {
+    display: flex;
+    gap: 10px;
+    height: 60px;
+    padding-top: 10px;
+    img {
+      width: 40px;
+      height: 40px;
+    }
+  }
+  .logo h1 {
+    font-size: 1.3rem;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+  .logIn-cart-section {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    .login-btn {
+      width: 120px;
+      padding: 10px 20px;
+      border-radius: 20px;
+      border: 1px solid #000;
+      background-color: #fff;
+      color: #000;
+      cursor: pointer;
+      text-transform: capitalize;
+    }
+    .barIcon {
+       font-size: 2rem;
+       font-weight: 300;
+       color: #555;
+       cursor: pointer;
+    }
+    .cart {
+      position: relative;
+      padding: 0;
+      img {
+        width: 35px;
+        height: 35px;
+      }
+      .products-number {
+          position: absolute;
+          top: -5px;
+          right: -10px;
+  
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: red;
+        color: #fff;
+  
+      }
+    }}
+    .nav-links {
+      position: absolute;
+      backdrop-filter: blur(5px);
+      background-color: #fff;
+      margin: 0;
+      list-style: none;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      left: 0;
+      right: 0;
+      top: calc( 100% + 15px);
+      align-items: center;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #ddd;
+      > li {
+        padding: 15px 0;
+        position: relative;
+        &::before , &.active::before {
+          content: "";
+          position: absolute;
+          width: 0%;
+          height: 1px;
+          background-color: #000;
+          left: 0;
+          bottom: 0;
+          transition: .3s ease-in;
+        }
+    
+        &.active::before {
+          width: 100%;
+        }
+    
+        &:hover::before  {
+          width: 100%;
+        }
+      }
+      .login-btn {
+        padding: 10px 20px;
+        border-radius: 30px;
+        border: 1px solid #000;
+        background-color: #fff;
+        color: #000;
+        cursor: pointer;
+        text-transform: capitalize;
+        margin: 15px 0;
+      }
+    }
+}
+
+
+@media (min-width : 992px) {
+  .navbar-mobile {
+    display: none;
+  }
+}

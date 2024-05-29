@@ -1,0 +1,13 @@
+.breadcrum-text {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 50px 0;
+}
+
+@media (maw-width: 541px) {
+    .breadcrum-text {
+       font-size: 0.8rem;
+    }
+}

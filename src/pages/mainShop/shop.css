@@ -1,0 +1,236 @@
+.front-section {
+  background: linear-gradient(180deg, #ececec, #ddd);
+  min-height: calc(100vh - 70px);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.front-section-container {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 40px;
+  align-items: center;
+
+  .info {
+    flex: 1;
+    .top-text {
+      color: #666;
+      text-transform: uppercase;
+    }
+    .big-text {
+      font-size: 4rem;
+      text-transform: capitalize;
+      span.handIcon {
+        display: flex;
+        align-items: center;
+        img {
+          width: 80px;
+          height: 80px;
+          margin-left: 15px;
+        }
+      }
+      span {
+        display: block;
+      }
+    }
+    button.go-to-latest {
+      width: 220px;
+      background: #dc0a0a;
+      color: #fff;
+      border: none;
+      padding: 20px;
+      border-radius: 30px;
+      font-size: 1rem;
+      font-weight: 300;
+      cursor: pointer;
+      text-transform: capitalize;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      p {
+        margin: 0;
+        padding: 0;
+      }
+    }
+  }
+  .front-section-img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    padding-left: 50px;
+    img {
+      max-width: 400px;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .front-section-container {
+    justify-content: center;
+    .info {
+      text-align: center;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      gap: 30px;
+      & .big-text {
+        font-size: 2rem;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+        img {
+          width: 40px;
+          height: 40px;
+        }
+      }
+    }
+    .front-section-img {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .front-section-container {
+    .info .big-text {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.exclusive-section {
+  min-height: 100vh;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  .exclusive-section-container {
+    background: linear-gradient(180deg, #ececec, #ddd);
+    padding: 0px 60px;
+    .info {
+      padding-left: 50px;
+      .big-text {
+        margin-bottom: 20px;
+        font-size: 3rem;
+      }
+      .top-text {
+        margin-bottom: 40px;
+      }
+      button {
+        justify-content: center;
+      }
+    }
+    .front-section-img {
+      img {
+        width: 350px;
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .exclusive-section .exclusive-section-container {
+    height: 60vh;
+    .info {
+      padding: 0;
+      .big-text {
+        font-size: 2rem;
+      }
+      .top-text {
+        margin: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 541px) {
+  .exclusive-section .exclusive-section-container {
+    .info {
+      .big-text {
+        font-size: 1.7rem;
+      }
+      .top-text {
+        font-size: 0.9rem;
+      }
+    }
+  }
+}
+
+.offers {
+  height: 60vh;
+  margin: 50px 0;
+  display: flex;
+  align-items: center;
+  .offers-section-container {
+    background: linear-gradient(180deg, #ececec, #ddd);
+    padding: 60px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .offers-tittle {
+      text-transform: capitalize;
+      margin-bottom: 0px;
+    }
+    p.small-text {
+      color: #333;
+    }
+    .subscribe-board {
+      background-color: #fff;
+      padding: 0;
+      display: flex;
+      width: 500px;
+      border-radius: 30px;
+      border: 1px solid #ececec;
+      overflow: hidden;
+      gap: 10px;
+      input,
+      button {
+        padding: 15px;
+        border: none;
+        outline: none;
+      }
+      input.email {
+        flex: 1;
+        &::placeholder {
+          transition: 0.3s ease-in-out;
+        }
+        &:focus::placeholder {
+          opacity: 0;
+        }
+      }
+      button.subscribe-btn {
+        background-color: #000;
+        color: #fff;
+        text-align: center;
+        text-transform: capitalize;
+        font-weight: 600;
+        border-radius: 30px;
+        padding: 15px 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: 541px) {
+  .offers .offers-section-container {
+    .offers-tittle {
+        font-size: 1.1rem;
+    }
+    .small-text {
+        font-size: 0.85rem;
+    }
+    .subscribe-board {
+      flex-direction: column;
+      gap: 10px;
+      background: transparent;
+      width: 100%;
+      border-radius: 0;
+      input {
+        background: #fff;
+    border-radius: 30px;
+      }
+    }
+  }
+}
